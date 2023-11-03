@@ -13,10 +13,10 @@ interface IBodyParams {
 }
 
 export const updateByIdValidator = validation({
-  body: yup.object().shape({
+  params: yup.object().shape({
     id: yup.number().integer().required().moreThan(0)
   }),
-  params: yup.object().shape({
+  body: yup.object().shape({
     name: yup.string().required().min(3),
   })
 });

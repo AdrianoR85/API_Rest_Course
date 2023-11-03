@@ -9,7 +9,7 @@ interface IParamsProps {
 }
 
 export const getByIdValidator = validation({
-  query: yup.object().shape({
+  params: yup.object().shape({
     id: yup.number().integer().notRequired().moreThan(0)
   })
 });
