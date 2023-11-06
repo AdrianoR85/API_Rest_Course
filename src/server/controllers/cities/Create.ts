@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { validation } from "../../shared/middleware";
 import * as yup from "yup";
+import { StatusCodes } from "http-status-codes";
 
 interface ICity {
   name: string;
@@ -14,5 +15,6 @@ export const createValidator = validation({
 
 export const create = async (req: Request<{},{}, ICity>, res: Response) => {
   console.log(req.body);
-  return res.send('Create!');
+
+  return res.status(StatusCodes.CREATED).json(1);
 };
