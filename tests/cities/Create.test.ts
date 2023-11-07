@@ -1,11 +1,7 @@
 import { StatusCodes } from "http-status-codes";
-import { testServer } from "../jest.setup";
-
-
+import { testServer } from "../jest.setup"
 
 describe("Cities - Create", () => {
-
-
 
   it("Create register", async () => {
     const res1 = await testServer
